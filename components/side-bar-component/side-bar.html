@@ -1,0 +1,9 @@
+<div class="section-container">
+    <h4 class="section-title"><span>Recent Post</span></h4>
+    <ul class="sidebar-recent-post">
+        <li ng-repeat="rec in sbcc.recent.blogArticles">
+                <h4 class="title"><a ui-sref="newsDetail({id: rec._id})">{{rec.title}}</a></h4>
+                <div class="date">{{rec.dateCreated | date:'d'}} {{rec.dateCreated | date:'MMMM'}} {{rec.dateCreated | date:'yyyy'}}</div>
+        </li>
+    </ul>
+</div>

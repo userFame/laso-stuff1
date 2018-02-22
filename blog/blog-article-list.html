@@ -1,0 +1,103 @@
+<!-- begin #content -->
+<div id="content" class="content">
+    <!-- begin container -->
+    <div class="container">
+        <!-- begin row -->
+        <div class="row row-space-30">
+            <!-- begin col-9 -->
+            <div class="col-md-9">
+                <!-- begin post-list -->
+                <ul class="post-list">
+                    <blog-articles-component blog-article="article" ng-repeat="article in bnc.blogArticles.blogArticles"></blog-articles-component>
+                </ul>
+                <div class="section-container">
+                    <!-- begin pagination -->
+                    <div class="pagination-container text-center">
+                        <ul uib-pagination total-items="bnc.totalItems" items-per-page="20" ng-model="bnc.currentPage" ng-change="bnc.pageChanged(bnc.currentPage)" class="pagination m-t-0 m-b-0" previous-text="&laquo;" next-text="&raquo;">
+                        </ul>
+                    </div>
+                    <!-- end pagination -->
+                </div>
+            </div>
+            <!-- end col-9 -->
+            <!-- begin col-3 -->
+            <div class="col-md-3">
+                <!-- begin section-container -->
+                <!-- <div class="section-container">
+                    <div class="input-group sidebar-search">
+                        <input type="text" class="form-control" placeholder="Search Our Stories..." />
+                        <span class="input-group-btn">
+                            <button class="btn btn-inverse" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div> -->
+                <!-- end section-container -->
+                <!-- begin section-container -->
+                <!-- <div class="section-container">
+                    <h4 class="section-title">
+                        <span>Categories</span>
+                    </h4>
+                    <ul class="sidebar-list">
+                        <li>
+                            <a href="#">Sports (20)</a>
+                        </li>
+                        <li>
+                            <a href="#">Outdoor Sports (45)</a>
+                        </li>
+                        <li>
+                            <a href="#">Indoor Sports (1,292)</a>
+                        </li>
+                        <li>
+                            <a href="#">Video Shooting (12)</a>
+                        </li>
+                        <li>
+                            <a href="#">Drone (229)</a>
+                        </li>
+                        <li>
+                            <a href="#">Uncategorized (1,482)</a>
+                        </li>
+                    </ul>
+                </div> -->
+                <!-- end section-container -->
+                <!-- begin section-container -->
+                <side-bar-component></side-bar-component>
+                <!-- end section-container -->
+                <!-- begin section-container -->
+                <div class="section-container">
+                    <h4 class="section-title">
+                        <span>Follow Us</span>
+                    </h4>
+                    <ul class="sidebar-social-list">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end section-container -->
+            </div>
+            <!-- end col-3 -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</div>
+<!-- end #content -->

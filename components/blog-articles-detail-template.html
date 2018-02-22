@@ -1,0 +1,50 @@
+<li >
+    <!-- begin post-left-info -->
+    <div class="post-left-info">
+        <div class="post-date">
+            <span class="day">{{bacc.blogArticle.dateCreated | date : 'd'}}</span>
+            <span class="month">{{bacc.blogArticle.dateCreated | date: 'MMM'}}</span>
+            <!--bacc.blogArticle.dateCreated-->
+        </div>
+        <div class="post-likes">
+            <i class="fa fa-heart-o"></i>
+            <span class="number">1,292</span>
+        </div>
+    </div>
+    <!-- end post-left-info -->
+    <!-- begin post-content -->
+    <div class="post-content">
+        <!-- begin post-image -->
+        <div class="post-image">
+            <a href="">
+                <!-- Should take you to details of blog -->
+                <img ng-src="{{bacc.blogArticle.imageURL}}" alt="" />
+            </a>
+        </div>
+        <!-- end post-image -->
+        <!-- begin post-info -->
+        <div class="post-info">
+            <h4 class="post-title">
+                    <!-- <a ng-href='news/{{bacc.blogArticle._id}}' >{{bacc.blogArticle._id}}</a> -->
+                <a ui-sref="newsDetail({id: bacc.blogArticle._id})">{{bacc.blogArticle.title}}</a>
+            </h4>
+            <div class="post-by">
+                Posted By
+                <a href="#">{{bacc.blogArticle.profile.profileOverrides.name}}</a>
+                <span class="divider">|</span>
+                <!-- <div ng-repeat="tag in bacc.blogArticle.tags"> -->
+                    <span ng-repeat="tag in bacc.blogArticle.tags track by $index"><a href="#" >{{tag}}</a><span ng-if='$last === false'>, </span></span> 
+                    <!-- $index in ng-repeat in ng if last one in array and length of tag array -->
+                <!-- </div> -->
+                <span class="divider">|</span> 12 Comments
+            </div>
+            <div class="post-desc" ng-bind-html="bacc.blogArticle.articleContent"></div>
+        </div>
+        <!-- end post-info -->
+    </div>
+    <!-- end post-content -->
+</li>
+<br>
+<br>
+<br>
+<br>
